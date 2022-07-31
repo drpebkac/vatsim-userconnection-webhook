@@ -5,9 +5,12 @@ A Discord script that acts like a minibot to provide Discord notifications when 
 
 The Powershell script runs as a daemon and performs HTTP GET requests against the Vatsim API every 10 seconds. Based on a VATSIM SID that is passed through as params, it will obtain the Vatsim user's connection details and pre-flight plan details. These details are then composed into json and POSTed to Discord webhooks. 
 
-A user who is online is determined `end` property on https://api.vatsim.net/api/ratings/{idnum}/connections/
+A user who is online is determined by the `end` property on https://api.vatsim.net/api/ratings/{idnum}/connections/
 - If the value is null, it means the user is connected. A webhook will be sent to Discord
 - If the value has a date, it means the user has disconnected. No webhooks will be sent to Discord
+
+![image](https://user-images.githubusercontent.com/67497646/182026836-846b1555-729d-4b95-aa9f-19be65d63a74.png)
+
 
 ## How to use
 1. First create a webhook URL on a particular channel for your server for the webhooks to be dumped on
