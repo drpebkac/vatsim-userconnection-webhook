@@ -1,9 +1,9 @@
 # vatsim-userconnection-webhook
-A Discord minibot that runs a webhook each time a particular user (SID) connects to the network. The purpose is to provide notifications of a particular Vatsim user whenever they connect to the network via v/xpilot.
+A Discord script that acts like a minibot to provide Discord notifications when a particular Vatsim user connects to the network via v/xpilot.
 
 ## How it works
 
-The Powershell script runs as a daemon and performs HTTP GET requests against the Vatsim API every 10 seconds, based on a VATSIM SID its given. By doing so, it will obtain the Vatsim user's connection details and pre-flight plan details. These details are then composed into json and POSTed to Discord webhooks. 
+The Powershell script runs as a daemon and performs HTTP GET requests against the Vatsim API every 10 seconds. Based on a VATSIM SID that is passed through as params, it will obtain the Vatsim user's connection details and pre-flight plan details. These details are then composed into json and POSTed to Discord webhooks. 
 
 A user who is online is determined `end` property on https://api.vatsim.net/api/ratings/{idnum}/connections/
 - If the value is null, it means the user is connected. A webhook will be sent to Discord
@@ -23,3 +23,7 @@ A user who is online is determined `end` property on https://api.vatsim.net/api/
 #### Example
 
 `run.ps1 -$VatsimSID 0000000 -WebhookURL "https://discord.com/api/webhooks/000000000000000000000/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"`
+
+## Uptime
+
+Not garenteed.
