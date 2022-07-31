@@ -12,9 +12,11 @@ A user who is online is determined by the `end` property on https://api.vatsim.n
 - If the value has a date, it means the user has disconnected. No webhooks will be sent to Discord
 
 ## How to use
-1. First create a webhook URL on a particular channel for your server for the webhooks to be dumped on
-2. Make sure you have obtained the SID for a specific VATSIM user
-3. Run the script and pass the following params
+1. Enable ExecutionPolicy on Powershell. A guide on how to do this can be found here. https://windowstect.com/set-powershell-execution-policy-as-unrestricted/
+2. Create a webhook URL on your particular channel on your server for the webhooks to be dumped to.
+3. Make sure you have obtained the SID for a specific VATSIM user.
+4. Open Powershell, Navigate to the Script.
+5. Run the script and pass the following params.
 
 | Param        | Description                                                                 | Required |
 |--------------|-----------------------------------------------------------------------------|----------|
