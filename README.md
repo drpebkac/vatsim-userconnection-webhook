@@ -1,6 +1,8 @@
 # vatsim-userconnection-webhook
 A Discord script that acts like a minibot to provide Discord notifications when a particular Vatsim user connects to the network via v/xpilot.
 
+# Disclaimer - This is the older script. For the newer one, use the python version, the new one also uses the same API that vatspy uses
+
 ![image](https://user-images.githubusercontent.com/67497646/182026836-846b1555-729d-4b95-aa9f-19be65d63a74.png)
 
 ## How it works
